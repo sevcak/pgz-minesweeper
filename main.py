@@ -1,12 +1,13 @@
-import pygame, sys
-from pygame.locals import QUIT
+import pgzrun
 
-pygame.init()
-DISPLAYSURF = pygame.display.set_mode((400, 300))
-pygame.display.set_caption('Hello World!')
-while True:
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
-    pygame.display.update()
+# screen dimensions
+WIDTH = 600
+HEIGHT = 400
+
+
+def draw():
+    # background fill
+    screen.fill((80, 80, 80))
+
+
+pgzrun.go()
