@@ -3,6 +3,7 @@ import pgzrun
 # screen dimensions
 WIDTH = 600
 HEIGHT = 400
+TITLE = 'Minesweeper'
 
 
 def draw():
