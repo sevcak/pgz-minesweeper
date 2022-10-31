@@ -166,6 +166,7 @@ cython_debug/
 ### replit ###
 # Replit config file
 .replit
+.breakpoints
 
 # Replit Nix config file
 replit.nix
