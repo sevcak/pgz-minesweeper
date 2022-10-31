@@ -1,14 +1,16 @@
 import pgzrun
 
 # screen dimensions
-WIDTH = 1280
-HEIGHT = 720
+WIDTH = 640
+HEIGHT = 360
 TITLE = 'Minesweeper'
 
 
 def draw():
     # background fill
-    screen.fill((120, 120, 120))
+    screen.blit('bg', (0,0))
 
+def update():
+    pass
 
 pgzrun.go()
