@@ -5,6 +5,7 @@ WIDTH = 640
 HEIGHT = 360
 TITLE = 'Minesweeper'
 
+#TEST
 
 def draw():
     # background fill
