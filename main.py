@@ -6,11 +6,16 @@ HEIGHT = 360
 TITLE = 'Minesweeper'
 
 policka = list()
+
+# vytvorenie policok
 for i in range(9):
     for j in range(20):
+        # vytvorenie jedneho policka
         policko = Actor('tile', topleft=(10 + j * 31, 71 + i * 31))
+        # vlastnosti riadok a stlpec sluzia na identifikaciu pozicie policka
         policko.riadok = i
         policko.stlpec = j
+
         policka.append(policko)
 
 
