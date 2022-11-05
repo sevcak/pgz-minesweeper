@@ -17,7 +17,7 @@ for i in range(9):
         policko.stlpec = j
 
         policka.append(policko)
-
+#test111
 
 def draw():
     # background fill
