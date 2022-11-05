@@ -124,13 +124,13 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# .env
+# .venv
+# env/
+# venv/
+# ENV/
+# env.bak/
+# venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -165,8 +165,8 @@ cython_debug/
 
 ### replit ###
 # Replit config file
-.replit
+# .replit
 .breakpoints
 
 # Replit Nix config file
-replit.nix
+# replit.nix
