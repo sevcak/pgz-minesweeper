@@ -7,7 +7,7 @@ HEIGHT = 360
 TITLE = 'Minesweeper'
 
 policka = list()
-
+first_click = True
 
 # vytvorenie policok
 for i in range(9):
@@ -17,9 +17,10 @@ for i in range(9):
         # vlastnosti riadok a stlpec sluzia na identifikaciu pozicie policka
         policko.riadok = i
         policko.stlpec = j
+        policko.bomb = False
 
         policka.append(policko)
-#test111
+
 
 def draw():
     # background fill
@@ -31,13 +32,14 @@ def draw():
 
 
 def update():
-    
-         
+
     pass
 
 
 # osetruje klik mysou
 def on_mouse_down(pos):
+    global first_click
+
     # osetruje klik na policko
     collrect = Actor('empty', topleft=pos)
     index = collrect.collidelist(policka)
@@ -46,22 +48,23 @@ def on_mouse_down(pos):
           f'index: {index}\n'
           f'riadok: {kliknute_policko.riadok}\n'
           f'stlpec: {kliknute_policko.stlpec}\n')
-  
-  # zobrazenie mín po kliknuti
-  #zobrazia sa kvôli testu potom spolu s cislami ich treba schovat
-  
-    
-    for i in range (40):
-      num = random.randint(0, 179)
-      if num != index and policka[num].image != "tile-bomb":
-        policka[num].image = "tile-bomb" 
-      else:
-        num = random.randint(0, 179)
-        if policka[num].image != "tile-bomb":
-          policka[num].image = "tile-bomb"
-        else:
-          num = random.randint(0, 179)
-          if policka[num].image != "tile-bomb":
-            policka[num].image = "tile-bomb"
-              
+
+    # rozlozenie min po prvom kliknuti
+    if first_click == True:
+        first_click = False
+
+        for i in range(40):
+            placed_bomb = False
+
+            while placed_bomb == False:
+                num = random.randint(0, 179)
+                if num != index and policka[num].bomb == False:
+                    placed_bomb = True
+
+                    policka[num].bomb = True
+                    # nastavi texturu bomby pre testovacie ucely (neskor odstranit)
+                    policka[num].image = "tile-bomb"
+        print('Miny boli rozlozene.')
+
+
 pgzrun.go()
