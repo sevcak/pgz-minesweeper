@@ -1,4 +1,5 @@
 import pgzrun
+import random
 
 # screen dimensions
 WIDTH = 640
@@ -6,6 +7,7 @@ HEIGHT = 360
 TITLE = 'Minesweeper'
 
 policka = list()
+
 
 # vytvorenie policok
 for i in range(9):
@@ -29,6 +31,8 @@ def draw():
 
 
 def update():
+    
+         
     pass
 
 
@@ -42,6 +46,22 @@ def on_mouse_down(pos):
           f'index: {index}\n'
           f'riadok: {kliknute_policko.riadok}\n'
           f'stlpec: {kliknute_policko.stlpec}\n')
-
-
+  
+  # zobrazenie mín po kliknuti
+  #zobrazia sa kvôli testu potom spolu s cislami ich treba schovat
+  
+    
+    for i in range (40):
+      num = random.randint(0, 179)
+      if num != index and policka[num].image != "tile-bomb":
+        policka[num].image = "tile-bomb" 
+      else:
+        num = random.randint(0, 179)
+        if policka[num].image != "tile-bomb":
+          policka[num].image = "tile-bomb"
+        else:
+          num = random.randint(0, 179)
+          if policka[num].image != "tile-bomb":
+            policka[num].image = "tile-bomb"
+              
 pgzrun.go()
