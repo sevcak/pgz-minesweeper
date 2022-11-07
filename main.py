@@ -115,5 +115,23 @@ def on_mouse_down(pos):
                 button_mode.image = 'button-mode-uncover'
     
     else:
-        print('Neprebieha hra')
+        print('Neprebieha hra') 
+    # restart
+    if button_restart.collidepoint(pos):
+          print('restart')
+          start_position()
+#funkcia startovacej pozicie
+def start_position():
+    global first_click
+    global hra
+    
+    for policko in policka:
+        
+        policko.bomb = False
+        policko.image = 'tile'
+    button_mode.image = 'button-mode-uncover'
+    button_mode.uncover = True
+    first_click = True
+    hra = True
+  
 pgzrun.go()
