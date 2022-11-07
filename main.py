@@ -26,9 +26,9 @@ for i in range(9):
         policko.stlpec = j
         policko.bomb = False
         policko.flagged = False
+        policko.uncovered = False
 
         policka.append(policko)
-
 
 def draw():
     # background fill
@@ -43,10 +43,8 @@ def draw():
     button_save.draw()
 
 def update():
-
     pass
-
-
+    
 # osetruje klik mysou
 def on_mouse_down(pos):
     global first_click
@@ -95,13 +93,15 @@ def on_mouse_down(pos):
                 else:
                     if policka[index].bomb == False:
                         policka[index].image = 'tile-one'
+                        policka[index].uncovered = True
         
         #pokladanie a rusenie vlajok                
         elif button_mode.uncover == False:
-            if policka[index].flagged == False and index >= 0:
+            if policka[index].flagged == False and index >= 0 and policka[index].uncovered == False:
                     policka[index].image = 'tile-flagged'
                     policka[index].flagged = True
-            else:
+                    #policka[index].uncovered = True
+            elif policka[index].flagged == True and index >= 0:
                 policka[index].image = 'tile'
                 policka[index].flagged = False
 
@@ -128,6 +128,8 @@ def start_position():
     for policko in policka:
         
         policko.bomb = False
+        policko.flagged = False
+        policko.uncovered = False
         policko.image = 'tile'
     button_mode.image = 'button-mode-uncover'
     button_mode.uncover = True
