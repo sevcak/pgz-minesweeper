@@ -11,9 +11,11 @@ policka = list()
 first_click = True
 hra = True
 
-button_mode = Actor('button-mode-uncover', (WIDTH - 160, 72 / 2))
-button_restart = Actor('button-restart', (WIDTH - 100, 72 / 2))
+button_mode = Actor('button-mode-uncover', (WIDTH - 220, 72 / 2))
+button_restart = Actor('button-restart', (WIDTH - 160, 72 / 2))
+button_load = Actor('button-load', (WIDTH - 100, 72 / 2))
 button_save = Actor('button-save', (WIDTH - 40, 72 / 2))
+
 
 button_mode.uncover = True
 
@@ -43,6 +45,7 @@ def draw():
 
     button_mode.draw()
     button_restart.draw()
+    button_load.draw()
     button_save.draw()
 
 
