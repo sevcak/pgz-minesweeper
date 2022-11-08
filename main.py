@@ -10,9 +10,9 @@ policka = list()
 first_click = True
 hra = True
 
-button_mode = Actor('button-mode-uncover', (WIDTH - 160, 72/2))
-button_restart = Actor('button-restart', (WIDTH - 100, 72/2))
-button_save = Actor('button-save', (WIDTH - 40, 72/2))
+button_mode = Actor('button-mode-uncover', (WIDTH - 160, 72 / 2))
+button_restart = Actor('button-restart', (WIDTH - 100, 72 / 2))
+button_save = Actor('button-save', (WIDTH - 40, 72 / 2))
 
 button_mode.uncover = True
 
@@ -30,6 +30,7 @@ for i in range(9):
 
         policka.append(policko)
 
+
 def draw():
     # background fill
     screen.blit('bg', (0, 0))
@@ -37,14 +38,16 @@ def draw():
     # renders tiles
     for policko in policka:
         policko.draw()
-      
+
     button_mode.draw()
     button_restart.draw()
     button_save.draw()
 
+
 def update():
     pass
-    
+
+
 # osetruje klik mysou
 def on_mouse_down(pos):
     global first_click
@@ -61,26 +64,27 @@ def on_mouse_down(pos):
                   f'riadok: {kliknute_policko.riadok}\n'
                   f'stlpec: {kliknute_policko.stlpec}\n')
 
-        #rozdeluje program na rezim odkryvania policok a na rezim pokladania vlajek
-        if button_mode.image == 'button-mode-uncover' and index >= 0 and policka[index].flagged == False:
+        # rozdeluje program na rezim odkryvania policok a na rezim pokladania vlajek
+        if button_mode.image == 'button-mode-uncover' and index >= 0 and policka[
+                index].flagged == False:
             # rozlozenie min po prvom kliknuti
             if first_click == True:
                 first_click = False
-    
+
                 for i in range(40):
                     placed_bomb = False
-    
+
                     while placed_bomb == False:
                         num = random.randint(0, 179)
                         if num != index and policka[num].bomb == False:
                             placed_bomb = True
-    
+
                             policka[num].bomb = True
                             # nastavi texturu bomby pre testovacie ucely (neskor odstranit)
-                            #policka[num].image = "tile-bomb"
+                            # policka[num].image = "tile-bomb"
                 print('Miny boli rozlozene.')
-    
-            #overovanie policka, ci bola stlacena mina
+
+            # overovanie policka, ci bola stlacena mina
             if policka[index].bomb == True:
                 hra = False
                 for i in range(180):
@@ -88,17 +92,18 @@ def on_mouse_down(pos):
                         policka[i].image = 'tile-bomb'
                     else:
                         policka[index].image = 'tile-bomb-red'
-    
+
             if policka[index].bomb == False:
                 policka[index].image = 'tile-one'
                 policka[index].uncovered = True
-        
-        #pokladanie a rusenie vlajok                
+
+        # pokladanie a rusenie vlajok
         elif button_mode.uncover == False:
-            if policka[index].flagged == False and index >= 0 and policka[index].uncovered == False:
-                    policka[index].image = 'tile-flagged'
-                    policka[index].flagged = True
-                    #policka[index].uncovered = True
+            if policka[index].flagged == False and index >= 0 and policka[
+                    index].uncovered == False:
+                policka[index].image = 'tile-flagged'
+                policka[index].flagged = True
+                #policka[index].uncovered = True
             elif policka[index].flagged == True and index >= 0:
                 policka[index].image = 'tile'
                 policka[index].flagged = False
@@ -107,24 +112,26 @@ def on_mouse_down(pos):
         if button_mode.collidepoint(pos):
             if button_mode.uncover == True:
                 button_mode.uncover = False
-                button_mode.image = 'button-mode-flag'     
+                button_mode.image = 'button-mode-flag'
             else:
                 button_mode.uncover = True
                 button_mode.image = 'button-mode-uncover'
-    
+
     else:
-        print('Neprebieha hra') 
+        print('Neprebieha hra')
     # restart
     if button_restart.collidepoint(pos):
-          print('restart')
-          start_position()
-#funkcia startovacej pozicie
+        print('restart')
+        start_position()
+
+
+# funkcia startovacej pozicie
 def start_position():
     global first_click
     global hra
-    
+
     for policko in policka:
-        
+
         policko.bomb = False
         policko.flagged = False
         policko.uncovered = False
@@ -133,5 +140,6 @@ def start_position():
     button_mode.uncover = True
     first_click = True
     hra = True
-  
+
+
 pgzrun.go()
