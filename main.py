@@ -80,20 +80,18 @@ def on_mouse_down(pos):
                             #policka[num].image = "tile-bomb"
                 print('Miny boli rozlozene.')
     
-            else:
-                #overovanie policka, ci bola stlacena mina
-                if policka[index].bomb == True:
-                    hra = False
-                    for i in range(180):
-                        if policka[i].bomb == True and policka[i] != index:
-                            policka[i].image = 'tile-bomb'
-                        else:
-                            policka[index].image = 'tile-bomb-red'
+            #overovanie policka, ci bola stlacena mina
+            if policka[index].bomb == True:
+                hra = False
+                for i in range(180):
+                    if policka[i].bomb == True and policka[i] != index:
+                        policka[i].image = 'tile-bomb'
+                    else:
+                        policka[index].image = 'tile-bomb-red'
     
-                else:
-                    if policka[index].bomb == False:
-                        policka[index].image = 'tile-one'
-                        policka[index].uncovered = True
+            if policka[index].bomb == False:
+                policka[index].image = 'tile-one'
+                policka[index].uncovered = True
         
         #pokladanie a rusenie vlajok                
         elif button_mode.uncover == False:
