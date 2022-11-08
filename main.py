@@ -1,5 +1,6 @@
 import pgzrun
 import random
+import json
 
 # screen dimensions
 WIDTH = 640
@@ -10,9 +11,11 @@ policka = list()
 first_click = True
 hra = True
 
-button_mode = Actor('button-mode-uncover', (WIDTH - 160, 72 / 2))
-button_restart = Actor('button-restart', (WIDTH - 100, 72 / 2))
+button_mode = Actor('button-mode-uncover', (WIDTH - 220, 72 / 2))
+button_restart = Actor('button-restart', (WIDTH - 160, 72 / 2))
+button_load = Actor('button-load', (WIDTH - 100, 72 / 2))
 button_save = Actor('button-save', (WIDTH - 40, 72 / 2))
+
 
 button_mode.uncover = True
 
@@ -42,6 +45,7 @@ def draw():
 
     button_mode.draw()
     button_restart.draw()
+    button_load.draw()
     button_save.draw()
 
 
@@ -99,8 +103,7 @@ def on_mouse_down(pos):
                 for i in range(180):
                     if policka[i].bomb == True and policka[i] != index:
                         policka[i].image = 'tile-bomb'
-                    else:
-                        policka[index].image = 'tile-bomb-red'
+                    policka[index].image = 'tile-bomb-red'
 
             if policka[index].bomb == False:
                 policka[index].image = f'tile-{policka[index].mines_near}'
@@ -128,13 +131,15 @@ def on_mouse_down(pos):
                 button_mode.uncover = True
                 button_mode.image = 'button-mode-uncover'
 
+        if button_save.collidepoint(pos):
+            save()
+        
     else:
         print('Neprebieha hra')
     # restart
     if button_restart.collidepoint(pos):
         print('restart')
         start_position()
-
 
 # funkcia startovacej pozicie
 def start_position():
@@ -201,7 +206,6 @@ def get_mines_in_proximity(policka, index):
 
     return pocet_min
 
-
 def uncover_recursive(index):
     '''
     Funkcia, ktora dostane ako parametre index jedneho policka so ziadnou minou v okoli,
@@ -258,5 +262,26 @@ def uncover_recursive(index):
             if policka[index].mines_near == 0:
                 uncover_recursive(index)
 
+
+def save():
+    policka_dict = {'policka': []}
+
+    for policko in policka:
+        policko_dict = {}
+        policko_dict['riadok'] = policko.riadok
+        policko_dict['stlpec'] = policko.stlpec
+        policko_dict['bomb'] = policko.bomb
+        # policko_dict['index'] = policko.index
+        policko_dict['mines_near'] = policko.mines_near
+        policko_dict['flagged'] = policko.flagged
+        policko_dict['uncovered'] = policko.uncovered
+
+        policka_dict['policka'].append(policko_dict)
+
+    with open("savefile.json", "w") as subor:
+        subor.write(json.dumps(policka_dict, indent=4))
+
+    print('hra bola ulozena')
+    
 
 pgzrun.go()
