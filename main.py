@@ -80,9 +80,17 @@ def on_mouse_down(pos):
                             placed_bomb = True
 
                             policka[num].bomb = True
-                            # nastavi texturu bomby pre testovacie ucely (neskor odstranit)
+                            # nastavi texturu bomby pre testovacie ucely (neskor odstranit/zakomentovat)
                             # policka[num].image = "tile-bomb"
                 print('Miny boli rozlozene.')
+
+                # zmapovanie min v okoli kazdeho policka, na ktorom nie je mina
+                for i in range(len(policka)):
+                    if policka[i].bomb == False:
+                        policka[i].mines_near = get_mines_in_proximity(
+                            policka, i)
+                        # nastavi pocet min v okoli ako texturu pre testovacie ucely (neskor odstranit/zakomentovat)
+                        # policka[i].image = f'tile-{policka[i].mines_near}'
 
             # overovanie policka, ci bola stlacena mina
             if policka[index].bomb == True:
@@ -94,7 +102,7 @@ def on_mouse_down(pos):
                         policka[index].image = 'tile-bomb-red'
 
             if policka[index].bomb == False:
-                policka[index].image = 'tile-one'
+                policka[index].image = f'tile-{policka[index].mines_near}'
                 policka[index].uncovered = True
 
         # pokladanie a rusenie vlajok
@@ -140,6 +148,55 @@ def start_position():
     button_mode.uncover = True
     first_click = True
     hra = True
+
+
+# funkcia, ktora zisti pocet min v okoli policka
+def get_mines_in_proximity(policka, index):
+    '''
+    funkcia, ktora dostane ako parametre cele pole a index jedneho policko z neho,
+    na zaklade nich vrati pocet min v okoli tohto policka
+    '''
+    pocet_min = 0
+
+    policko = policka[index]
+
+    # urcenie policok, ktore sa budu prehladavat
+    okolie = []
+    # lava strana
+    if policko.stlpec > 0:
+        # lavy stred
+        okolie.append(policka[index - 1])
+
+        if policko.riadok > 0:
+            # lavy horny roh
+            okolie.append(policka[index - 1 - 20])
+        if policko.riadok < 8:
+            # lavy dolny roh
+            okolie.append(policka[index - 1 + 20])
+    #prava strana
+    if policko.stlpec < 19:
+        # pravy stred
+        okolie.append(policka[index + 1])
+
+        if policko.riadok > 0:
+            # pravy horny roh
+            okolie.append(policka[index + 1 - 20])
+        if policko.riadok < 8:
+            # pravy dolny roh
+            okolie.append(policka[index + 1 + 20])
+    # horny stred
+    if policko.riadok > 0:
+        okolie.append(policka[index - 20])
+    # dolny stred
+    if policko.riadok < 8:
+        okolie.append(policka[index + 20])
+
+    # zistenie, kolko min je na okolytych polickach
+    for policko_okolia in okolie:
+        if policko_okolia.bomb:
+            pocet_min += 1
+
+    return pocet_min
 
 
 pgzrun.go()
