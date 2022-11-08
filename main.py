@@ -16,7 +16,6 @@ button_restart = Actor('button-restart', (WIDTH - 160, 72 / 2))
 button_load = Actor('button-load', (WIDTH - 100, 72 / 2))
 button_save = Actor('button-save', (WIDTH - 40, 72 / 2))
 
-
 button_mode.uncover = True
 
 # vytvorenie policok
@@ -133,13 +132,18 @@ def on_mouse_down(pos):
 
         if button_save.collidepoint(pos):
             save()
-        
+
     else:
         print('Neprebieha hra')
     # restart
     if button_restart.collidepoint(pos):
         print('restart')
         start_position()
+
+    if button_load.collidepoint(pos):
+        print('ulozena hra sa nacitala')
+        load()
+
 
 # funkcia startovacej pozicie
 def start_position():
@@ -206,6 +210,7 @@ def get_mines_in_proximity(policka, index):
 
     return pocet_min
 
+
 def uncover_recursive(index):
     '''
     Funkcia, ktora dostane ako parametre index jedneho policka so ziadnou minou v okoli,
@@ -256,7 +261,6 @@ def uncover_recursive(index):
         if policka[index].uncovered == False:
             policka[index].uncovered = True
             policka[index].image = f'tile-{policka[index].mines_near}'
-            print(f'{index}')
             # ak policko okolo seba nema ziadnu bombu
             # znovu sa spusti funkcia uncover_recursive(index)
             if policka[index].mines_near == 0:
@@ -278,10 +282,31 @@ def save():
 
         policka_dict['policka'].append(policko_dict)
 
-    with open("savefile.json", "w") as subor:
+    with open('savefile.json', 'w') as subor:
         subor.write(json.dumps(policka_dict, indent=4))
 
     print('hra bola ulozena')
-    
+
+
+def load():
+    global hra
+
+    hra = True
+    with open('savefile.json', 'r') as subor:
+        policka_dict = json.load(subor)['policka']
+
+        for i in range(len(policka_dict)):
+            policka[i].bomb = policka_dict[i]['bomb']
+            policka[i].uncovered = policka_dict[i]['uncovered']
+            policka[i].flagged = policka_dict[i]['flagged']
+            policka[i].mines_near = policka_dict[i]['mines_near']
+
+            if policka[i].flagged:
+                policka[i].image = 'tile-flagged'
+            elif policka[i].uncovered == False:
+                policka[i].image = 'tile'
+            elif policka[i].mines_near != None:
+                policka[i].image = f'tile-{policka[i].mines_near}'
+
 
 pgzrun.go()
