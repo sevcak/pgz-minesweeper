@@ -76,7 +76,7 @@ def on_mouse_down(pos):
             if first_click == True:
                 first_click = False
 
-                for i in range(40):
+                for i in range(30):
                     placed_bomb = False
 
                     while placed_bomb == False:
@@ -108,6 +108,8 @@ def on_mouse_down(pos):
             if policka[index].bomb == False:
                 policka[index].image = f'tile-{policka[index].mines_near}'
                 policka[index].uncovered = True
+                if policka[index].mines_near == 0:
+                    uncover_recursive(index)
 
         # pokladanie a rusenie vlajok
         elif button_mode.uncover == False:
@@ -115,12 +117,12 @@ def on_mouse_down(pos):
                     index].uncovered == False:
                 policka[index].image = 'tile-flagged'
                 policka[index].flagged = True
-                #policka[index].uncovered = True
+                # policka[index].uncovered = True
             elif policka[index].flagged == True and index >= 0:
                 policka[index].image = 'tile'
                 policka[index].flagged = False
 
-        #menenie modu flags a uncover
+        # menenie modu flags a uncover
         if button_mode.collidepoint(pos):
             if button_mode.uncover == True:
                 button_mode.uncover = False
@@ -159,8 +161,8 @@ def start_position():
 # funkcia, ktora zisti pocet min v okoli policka
 def get_mines_in_proximity(policka, index):
     '''
-    funkcia, ktora dostane ako parametre cele pole a index jedneho policko z neho,
-    na zaklade nich vrati pocet min v okoli tohto policka
+    Funkcia, ktora dostane ako parametre cele pole a index jedneho policko z neho,
+    na zaklade nich vrati pocet min v okoli tohto policka.
     '''
     pocet_min = 0
 
@@ -179,7 +181,7 @@ def get_mines_in_proximity(policka, index):
         if policko.riadok < 8:
             # lavy dolny roh
             okolie.append(policka[index - 1 + 20])
-    #prava strana
+    # prava strana
     if policko.stlpec < 19:
         # pravy stred
         okolie.append(policka[index + 1])
@@ -204,6 +206,62 @@ def get_mines_in_proximity(policka, index):
 
     return pocet_min
 
+def uncover_recursive(index):
+    '''
+    Funkcia, ktora dostane ako parametre index jedneho policka so ziadnou minou v okoli,
+    odkryje policka v jeho blizkosti,
+    zisti, ci sa v jeho blizkosti nachadza neodkryte policko so ziadnou minou v okoli,
+    a podla toho pre kazde taketo policko rekurzivne vola samu seba
+    a index tohto policka prebera ako novy parameter.
+    '''
+
+    policko = policka[index]
+
+    # urcenie policok, ktore sa budu prehladavat
+    okolie = []
+    # lava strana
+    if policko.stlpec > 0:
+        # lavy stred
+        okolie.append(policka[index - 1])
+
+        if policko.riadok > 0:
+            # lavy horny roh
+            okolie.append(policka[index - 1 - 20])
+        if policko.riadok < 8:
+            # lavy dolny roh
+            okolie.append(policka[index - 1 + 20])
+    # prava strana
+    if policko.stlpec < 19:
+        # pravy stred
+        okolie.append(policka[index + 1])
+
+        if policko.riadok > 0:
+            # pravy horny roh
+            okolie.append(policka[index + 1 - 20])
+        if policko.riadok < 8:
+            # pravy dolny roh
+            okolie.append(policka[index + 1 + 20])
+    # horny stred
+    if policko.riadok > 0:
+        okolie.append(policka[index - 20])
+    # dolny stred
+    if policko.riadok < 8:
+        okolie.append(policka[index + 20])
+
+    # mapovanie policok v okoli
+    for policko_okolia in okolie:
+        index = (policko_okolia.riadok * 20 + policko_okolia.stlpec)
+
+        # kontrola ci je policko uz odkryte, zmena obrazku policka
+        if policka[index].uncovered == False:
+            policka[index].uncovered = True
+            policka[index].image = f'tile-{policka[index].mines_near}'
+            print(f'{index}')
+            # ak policko okolo seba nema ziadnu bombu
+            # znovu sa spusti funkcia uncover_recursive(index)
+            if policka[index].mines_near == 0:
+                uncover_recursive(index)
+
 
 def save():
     policka_dict = {'policka': []}
@@ -224,4 +282,6 @@ def save():
         subor.write(json.dumps(policka_dict, indent=4))
 
     print('hra bola ulozena')
+    
+
 pgzrun.go()
