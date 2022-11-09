@@ -4,31 +4,31 @@
             "riadok": 0,
             "stlpec": 0,
             "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 0,
+            "stlpec": 1,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 0,
+            "stlpec": 2,
+            "bomb": false,
             "mines_near": 1,
             "flagged": false,
             "uncovered": false
         },
         {
             "riadok": 0,
-            "stlpec": 1,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 0,
-            "stlpec": 2,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 0,
             "stlpec": 3,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": false
         },
@@ -36,7 +36,7 @@
             "riadok": 0,
             "stlpec": 4,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": false
         },
@@ -44,7 +44,7 @@
             "riadok": 0,
             "stlpec": 5,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": false
         },
@@ -67,6 +67,14 @@
         {
             "riadok": 0,
             "stlpec": 8,
+            "bomb": false,
+            "mines_near": 3,
+            "flagged": false,
+            "uncovered": false
+        },
+        {
+            "riadok": 0,
+            "stlpec": 9,
             "bomb": true,
             "mines_near": null,
             "flagged": true,
@@ -74,17 +82,9 @@
         },
         {
             "riadok": 0,
-            "stlpec": 9,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 0,
             "stlpec": 10,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -92,23 +92,23 @@
             "riadok": 0,
             "stlpec": 11,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 0,
             "stlpec": 12,
-            "bomb": false,
+            "bomb": true,
             "mines_near": 0,
-            "flagged": false,
-            "uncovered": true
+            "flagged": true,
+            "uncovered": false
         },
         {
             "riadok": 0,
             "stlpec": 13,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -116,23 +116,23 @@
             "riadok": 0,
             "stlpec": 14,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 0,
             "stlpec": 15,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": true,
-            "uncovered": false
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
         },
         {
             "riadok": 0,
             "stlpec": 16,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": true
         },
@@ -140,7 +140,7 @@
             "riadok": 0,
             "stlpec": 17,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -148,7 +148,7 @@
             "riadok": 0,
             "stlpec": 18,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -156,7 +156,7 @@
             "riadok": 0,
             "stlpec": 19,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -164,13 +164,29 @@
             "riadok": 1,
             "stlpec": 0,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 1,
             "stlpec": 1,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 1,
+            "stlpec": 2,
+            "bomb": true,
+            "mines_near": 2,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 1,
+            "stlpec": 3,
             "bomb": false,
             "mines_near": 2,
             "flagged": false,
@@ -178,15 +194,39 @@
         },
         {
             "riadok": 1,
-            "stlpec": 2,
-            "bomb": true,
-            "mines_near": null,
+            "stlpec": 4,
+            "bomb": false,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": false
         },
         {
             "riadok": 1,
-            "stlpec": 3,
+            "stlpec": 5,
+            "bomb": false,
+            "mines_near": 2,
+            "flagged": false,
+            "uncovered": false
+        },
+        {
+            "riadok": 1,
+            "stlpec": 6,
+            "bomb": false,
+            "mines_near": 2,
+            "flagged": false,
+            "uncovered": false
+        },
+        {
+            "riadok": 1,
+            "stlpec": 7,
+            "bomb": true,
+            "mines_near": null,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 1,
+            "stlpec": 8,
             "bomb": false,
             "mines_near": 4,
             "flagged": false,
@@ -194,57 +234,17 @@
         },
         {
             "riadok": 1,
-            "stlpec": 4,
-            "bomb": false,
+            "stlpec": 9,
+            "bomb": true,
             "mines_near": 4,
-            "flagged": false,
+            "flagged": true,
             "uncovered": false
-        },
-        {
-            "riadok": 1,
-            "stlpec": 5,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 1,
-            "stlpec": 6,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 1,
-            "stlpec": 7,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 1,
-            "stlpec": 8,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 1,
-            "stlpec": 9,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
         },
         {
             "riadok": 1,
             "stlpec": 10,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 3,
             "flagged": false,
             "uncovered": true
         },
@@ -252,7 +252,7 @@
             "riadok": 1,
             "stlpec": 11,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -260,7 +260,7 @@
             "riadok": 1,
             "stlpec": 12,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -268,7 +268,7 @@
             "riadok": 1,
             "stlpec": 13,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -292,7 +292,7 @@
             "riadok": 1,
             "stlpec": 16,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": true
         },
@@ -300,23 +300,23 @@
             "riadok": 1,
             "stlpec": 17,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 1,
             "stlpec": 18,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
-            "uncovered": true
+            "bomb": true,
+            "mines_near": 1,
+            "flagged": true,
+            "uncovered": false
         },
         {
             "riadok": 1,
             "stlpec": 19,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -324,9 +324,9 @@
             "riadok": 2,
             "stlpec": 0,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 2,
@@ -334,11 +334,19 @@
             "bomb": false,
             "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 2,
             "stlpec": 2,
+            "bomb": false,
+            "mines_near": 2,
+            "flagged": false,
+            "uncovered": false
+        },
+        {
+            "riadok": 2,
+            "stlpec": 3,
             "bomb": false,
             "mines_near": 3,
             "flagged": false,
@@ -346,23 +354,23 @@
         },
         {
             "riadok": 2,
-            "stlpec": 3,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 2,
             "stlpec": 4,
             "bomb": true,
-            "mines_near": null,
+            "mines_near": 2,
             "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 2,
             "stlpec": 5,
+            "bomb": true,
+            "mines_near": 3,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 2,
+            "stlpec": 6,
             "bomb": false,
             "mines_near": 2,
             "flagged": false,
@@ -370,17 +378,9 @@
         },
         {
             "riadok": 2,
-            "stlpec": 6,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 2,
             "stlpec": 7,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -388,23 +388,23 @@
             "riadok": 2,
             "stlpec": 8,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 3,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 2,
             "stlpec": 9,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
+            "bomb": true,
+            "mines_near": 2,
+            "flagged": true,
+            "uncovered": false
         },
         {
             "riadok": 2,
             "stlpec": 10,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -412,7 +412,7 @@
             "riadok": 2,
             "stlpec": 11,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -428,23 +428,23 @@
             "riadok": 2,
             "stlpec": 13,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 2,
             "stlpec": 14,
-            "bomb": false,
+            "bomb": true,
             "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
+            "flagged": true,
+            "uncovered": false
         },
         {
             "riadok": 2,
             "stlpec": 15,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -460,7 +460,7 @@
             "riadok": 2,
             "stlpec": 17,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -484,31 +484,31 @@
             "riadok": 3,
             "stlpec": 0,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 3,
             "stlpec": 1,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 3,
             "stlpec": 2,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
+            "bomb": true,
+            "mines_near": 2,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 3,
             "stlpec": 3,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 3,
             "flagged": false,
             "uncovered": true
         },
@@ -524,7 +524,7 @@
             "riadok": 3,
             "stlpec": 5,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -532,7 +532,7 @@
             "riadok": 3,
             "stlpec": 6,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -548,23 +548,23 @@
             "riadok": 3,
             "stlpec": 8,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 3,
             "stlpec": 9,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": true,
-            "uncovered": false
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
         },
         {
             "riadok": 3,
             "stlpec": 10,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -579,18 +579,18 @@
         {
             "riadok": 3,
             "stlpec": 12,
-            "bomb": false,
+            "bomb": true,
             "mines_near": 2,
-            "flagged": false,
-            "uncovered": true
+            "flagged": true,
+            "uncovered": false
         },
         {
             "riadok": 3,
             "stlpec": 13,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": true,
-            "uncovered": false
+            "bomb": false,
+            "mines_near": 2,
+            "flagged": false,
+            "uncovered": true
         },
         {
             "riadok": 3,
@@ -604,7 +604,7 @@
             "riadok": 3,
             "stlpec": 15,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -612,7 +612,7 @@
             "riadok": 3,
             "stlpec": 16,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -620,7 +620,7 @@
             "riadok": 3,
             "stlpec": 17,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -635,78 +635,22 @@
         {
             "riadok": 3,
             "stlpec": 19,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": true,
-            "uncovered": false
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 0,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 1,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 4,
-            "stlpec": 2,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 4,
-            "stlpec": 3,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 4,
-            "stlpec": 4,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 4,
-            "stlpec": 5,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 4,
-            "stlpec": 6,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 4,
-            "stlpec": 7,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 4,
-            "stlpec": 8,
             "bomb": false,
             "mines_near": 4,
             "flagged": false,
@@ -714,19 +658,75 @@
         },
         {
             "riadok": 4,
-            "stlpec": 9,
+            "stlpec": 2,
             "bomb": true,
-            "mines_near": null,
-            "flagged": false,
+            "mines_near": 1,
+            "flagged": true,
             "uncovered": false
+        },
+        {
+            "riadok": 4,
+            "stlpec": 3,
+            "bomb": false,
+            "mines_near": 3,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 4,
+            "stlpec": 4,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 4,
+            "stlpec": 5,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 4,
+            "stlpec": 6,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 4,
+            "stlpec": 7,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 4,
+            "stlpec": 8,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 4,
+            "stlpec": 9,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 10,
             "bomb": false,
-            "mines_near": 3,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 4,
@@ -734,37 +734,37 @@
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 12,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 13,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 14,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 15,
             "bomb": true,
-            "mines_near": null,
+            "mines_near": 2,
             "flagged": true,
             "uncovered": false
         },
@@ -772,17 +772,17 @@
             "riadok": 4,
             "stlpec": 16,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 3,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 4,
             "stlpec": 17,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
-            "uncovered": true
+            "bomb": true,
+            "mines_near": 2,
+            "flagged": true,
+            "uncovered": false
         },
         {
             "riadok": 4,
@@ -796,7 +796,7 @@
             "riadok": 4,
             "stlpec": 19,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": true
         },
@@ -806,29 +806,29 @@
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 5,
             "stlpec": 1,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
+            "bomb": true,
+            "mines_near": 0,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 5,
             "stlpec": 2,
             "bomb": true,
-            "mines_near": null,
-            "flagged": false,
+            "mines_near": 1,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 5,
             "stlpec": 3,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 3,
             "flagged": false,
             "uncovered": true
         },
@@ -844,7 +844,7 @@
             "riadok": 5,
             "stlpec": 5,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": true
         },
@@ -852,13 +852,85 @@
             "riadok": 5,
             "stlpec": 6,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 0,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 5,
             "stlpec": 7,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 8,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 9,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 10,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 11,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 12,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 13,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 14,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 15,
+            "bomb": false,
+            "mines_near": 2,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 5,
+            "stlpec": 16,
             "bomb": true,
             "mines_near": null,
             "flagged": true,
@@ -866,81 +938,9 @@
         },
         {
             "riadok": 5,
-            "stlpec": 8,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 9,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 10,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 11,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 12,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 13,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 14,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 15,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 5,
-            "stlpec": 16,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": true
-        },
-        {
-            "riadok": 5,
             "stlpec": 17,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
@@ -948,7 +948,7 @@
             "riadok": 5,
             "stlpec": 18,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -964,93 +964,45 @@
             "riadok": 6,
             "stlpec": 0,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 1,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 2,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 3,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 3,
-            "bomb": false,
+            "bomb": true,
             "mines_near": 1,
-            "flagged": false,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 6,
             "stlpec": 4,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 5,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 6,
-            "stlpec": 6,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 6,
-            "stlpec": 7,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 6,
-            "stlpec": 8,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 6,
-            "stlpec": 9,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 6,
-            "stlpec": 10,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 6,
-            "stlpec": 11,
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
@@ -1058,41 +1010,89 @@
         },
         {
             "riadok": 6,
+            "stlpec": 6,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 6,
+            "stlpec": 7,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 6,
+            "stlpec": 8,
+            "bomb": false,
+            "mines_near": 2,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 6,
+            "stlpec": 9,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 6,
+            "stlpec": 10,
+            "bomb": false,
+            "mines_near": 3,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 6,
+            "stlpec": 11,
+            "bomb": true,
+            "mines_near": 1,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 6,
             "stlpec": 12,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 13,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 14,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 15,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 6,
             "stlpec": 16,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -1116,7 +1116,7 @@
             "riadok": 6,
             "stlpec": 19,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
@@ -1124,40 +1124,40 @@
             "riadok": 7,
             "stlpec": 0,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
             "stlpec": 1,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
             "stlpec": 2,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
             "stlpec": 3,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
             "stlpec": 4,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
+            "bomb": true,
+            "mines_near": 0,
+            "flagged": true,
             "uncovered": false
         },
         {
@@ -1166,7 +1166,7 @@
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
@@ -1174,107 +1174,131 @@
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
             "stlpec": 7,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
+            "bomb": true,
+            "mines_near": 1,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 7,
             "stlpec": 8,
             "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 7,
-            "stlpec": 9,
-            "bomb": false,
             "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 7,
-            "stlpec": 10,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 7,
-            "stlpec": 11,
-            "bomb": false,
-            "mines_near": 2,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 7,
-            "stlpec": 12,
-            "bomb": false,
+            "stlpec": 9,
+            "bomb": true,
             "mines_near": 0,
-            "flagged": false,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 7,
-            "stlpec": 13,
-            "bomb": false,
-            "mines_near": 2,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 7,
-            "stlpec": 14,
+            "stlpec": 10,
             "bomb": false,
             "mines_near": 4,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 7,
-            "stlpec": 15,
-            "bomb": false,
-            "mines_near": 4,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 7,
-            "stlpec": 16,
-            "bomb": false,
-            "mines_near": 3,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 7,
-            "stlpec": 17,
+            "stlpec": 11,
             "bomb": true,
-            "mines_near": null,
+            "mines_near": 2,
             "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 7,
+            "stlpec": 12,
+            "bomb": false,
+            "mines_near": 3,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 7,
+            "stlpec": 13,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 7,
+            "stlpec": 14,
+            "bomb": false,
+            "mines_near": 1,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 7,
+            "stlpec": 15,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 7,
+            "stlpec": 16,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 7,
+            "stlpec": 17,
+            "bomb": false,
+            "mines_near": 0,
+            "flagged": false,
+            "uncovered": true
+        },
+        {
+            "riadok": 7,
             "stlpec": 18,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
             "uncovered": true
         },
         {
             "riadok": 7,
             "stlpec": 19,
+            "bomb": true,
+            "mines_near": 0,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 8,
+            "stlpec": 0,
+            "bomb": true,
+            "mines_near": 0,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 8,
+            "stlpec": 1,
+            "bomb": true,
+            "mines_near": 0,
+            "flagged": true,
+            "uncovered": false
+        },
+        {
+            "riadok": 8,
+            "stlpec": 2,
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
@@ -1282,90 +1306,66 @@
         },
         {
             "riadok": 8,
-            "stlpec": 0,
-            "bomb": true,
-            "mines_near": null,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 8,
-            "stlpec": 1,
+            "stlpec": 3,
             "bomb": false,
             "mines_near": 1,
             "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 8,
-            "stlpec": 2,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
-            "uncovered": false
-        },
-        {
-            "riadok": 8,
-            "stlpec": 3,
-            "bomb": false,
-            "mines_near": 0,
-            "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 4,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 5,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 6,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 7,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 8,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
+            "bomb": true,
+            "mines_near": 0,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 8,
             "stlpec": 9,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 3,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 10,
             "bomb": true,
-            "mines_near": null,
-            "flagged": false,
+            "mines_near": 0,
+            "flagged": true,
             "uncovered": false
         },
         {
@@ -1380,65 +1380,65 @@
             "riadok": 8,
             "stlpec": 12,
             "bomb": false,
-            "mines_near": 0,
+            "mines_near": 2,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 13,
-            "bomb": false,
-            "mines_near": 1,
-            "flagged": false,
+            "bomb": true,
+            "mines_near": null,
+            "flagged": true,
             "uncovered": false
         },
         {
             "riadok": 8,
             "stlpec": 14,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 15,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 16,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 17,
             "bomb": false,
-            "mines_near": 1,
+            "mines_near": 0,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 18,
             "bomb": false,
-            "mines_near": 2,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         },
         {
             "riadok": 8,
             "stlpec": 19,
-            "bomb": true,
-            "mines_near": null,
+            "bomb": false,
+            "mines_near": 1,
             "flagged": false,
-            "uncovered": false
+            "uncovered": true
         }
     ]
 }

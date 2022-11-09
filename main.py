@@ -18,6 +18,10 @@ button_save = Actor('button-save', (WIDTH - 40, 72 / 2))
 
 button_mode.uncover = True
 
+game_status = Actor('button-smiley-happy', (WIDTH / 2, 72 / 2))
+
+game_status.win = False
+
 # vytvorenie policok
 for i in range(9):
     for j in range(20):
@@ -46,10 +50,25 @@ def draw():
     button_restart.draw()
     button_load.draw()
     button_save.draw()
+    game_status.draw()
 
 
 def update():
-    pass
+    #kontroluje ci su vsetky miny 'zavlajkovane' a vsetky ostatne policka odkryte ak ano vyhral si
+    global hra
+    if hra:
+        vyhra = True
+
+        for policko in policka:
+            if policko.uncovered == False and policko.bomb == False:
+                vyhra = False
+        if vyhra:
+            print("Vyhral si!")
+            reset_save()
+            game_status.win = True
+            game_status.image = 'button-win'
+            hra = False
+            vyhra = False
 
 
 # osetruje klik mysou
@@ -99,6 +118,7 @@ def on_mouse_down(pos):
             # overovanie policka, ci bola stlacena mina
             if policka[index].bomb == True:
                 hra = False
+                game_status.image = 'button-smiley-dead'
                 for i in range(180):
                     if policka[i].bomb == True and policka[i] != index:
                         policka[i].image = 'tile-bomb'
@@ -137,11 +157,11 @@ def on_mouse_down(pos):
         print('Neprebieha hra')
     # restart
     if button_restart.collidepoint(pos):
-        print('restart')
         start_position()
+        reset_save()
+        
 
     if button_load.collidepoint(pos):
-        print('ulozena hra sa nacitala')
         load()
 
 
@@ -160,6 +180,9 @@ def start_position():
     button_mode.uncover = True
     first_click = True
     hra = True
+    game_status.win = False
+    game_status.image = 'button-smiley-happy'
+    print('restart')
 
 
 # funkcia, ktora zisti pocet min v okoli policka
@@ -287,6 +310,20 @@ def save():
 
     print('hra bola ulozena')
 
+def reset_save():
+    policka_dict = {'policka': []}
+
+    for policko in policka:
+        policko_dict = {}
+        policko_dict['bomb'] = policko.bomb = False
+        policko_dict['mines_near'] = policko.mines_near = None
+        policko_dict['flagged'] = policko.flagged = False
+        policko_dict['uncovered'] = policko.uncovered = False
+
+        policka_dict['policka'].append(policko_dict)
+
+    with open('savefile.json', 'w') as subor:
+        subor.write(json.dumps(policka_dict, indent=4))
 
 def load():
     global hra
@@ -308,5 +345,8 @@ def load():
             elif policka[i].mines_near != None:
                 policka[i].image = f'tile-{policka[i].mines_near}'
 
+    game_status.win = False
+    game_status.image = 'button-smiley-happy'
+    print('ulozena hra sa nacitala')
 
 pgzrun.go()
