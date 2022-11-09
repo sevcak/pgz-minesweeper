@@ -159,7 +159,6 @@ def on_mouse_down(pos):
     if button_restart.collidepoint(pos):
         start_position()
         reset_save()
-        
 
     if button_load.collidepoint(pos):
         load()
@@ -291,7 +290,10 @@ def uncover_recursive(index):
 
 
 def save():
+    global first_click
+
     policka_dict = {'policka': []}
+    policka_dict['first_click'] = first_click
 
     for policko in policka:
         policko_dict = {}
@@ -305,13 +307,16 @@ def save():
 
         policka_dict['policka'].append(policko_dict)
 
+    # zapis do save suboru
     with open('savefile.json', 'w') as subor:
         subor.write(json.dumps(policka_dict, indent=4))
 
     print('hra bola ulozena')
 
+
 def reset_save():
     policka_dict = {'policka': []}
+    policka_dict['first_click'] = True
 
     for policko in policka:
         policko_dict = {}
@@ -325,12 +330,16 @@ def reset_save():
     with open('savefile.json', 'w') as subor:
         subor.write(json.dumps(policka_dict, indent=4))
 
+
 def load():
     global hra
+    global first_click
 
     hra = True
     with open('savefile.json', 'r') as subor:
-        policka_dict = json.load(subor)['policka']
+        load = json.load(subor)
+        policka_dict = load['policka']
+        first_click = load['first_click']
 
         for i in range(len(policka_dict)):
             policka[i].bomb = policka_dict[i]['bomb']
@@ -348,5 +357,6 @@ def load():
     game_status.win = False
     game_status.image = 'button-smiley-happy'
     print('ulozena hra sa nacitala')
+
 
 pgzrun.go()
