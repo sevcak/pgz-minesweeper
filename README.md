@@ -9,6 +9,9 @@
 
 ---
 
+# Play in browser
+You can play _pgz-minesweeper_ in your web browser here: https://replit.com/@sevcak/pgz-minesweeper
+
 # Creators
 This project was made by:
 - Lukáš Ševc ([@sevcak](https://github.com/sevcak))
